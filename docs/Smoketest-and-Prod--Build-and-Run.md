@@ -1,27 +1,3 @@
-## Differences between environments
-
-Smoketest similar to prod. Differences:
-
-  - ensure version updated on master since last deploy
-  - shares remote transcoder(?) and store directories with prod
-  - installation differences:
-      - script for running refreshes of db from prod, applied manually
-        (eventual cron job)
-      - no ssl
-
-
-Dev similar to smoketest. Differences:
-
-  - empty db or restored db
-  - deletes db and uploads each time branch is changed
-  - installation differences:
-      - transcode directory location
-      - local transcoding
-      - solr installed in user directory
-      - location of store directories
-      - no ssl
-      - root directory where source code is cloned is
-        /home/centos/src/databrary
 ## Preliminaries
 
 All instructions below which use ssh require that your laptop be within
