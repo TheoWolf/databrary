@@ -176,6 +176,9 @@ This step assumes that the first time that the server was created, the &quot;Res
 <tbody>
 <tr class="odd">
 <td><p>From laptop, connect to smoketest becoming demo user</p>
+ <ul>
+<li><pre><code>sudo su - demo</code></pre></li>
+</ul>
 <ul>
 <li><pre><code>ssh -t &lt;NETID&gt;@devdatabrary2.home.nyu.edu &quot;ssh -t databrary2&quot;</code></pre></li>
 </ul>
