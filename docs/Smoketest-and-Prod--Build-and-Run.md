@@ -59,6 +59,9 @@ the NYU network or that you have connected to the VPN.
 <ul>
 <li><pre><code>ssh -t &lt;NETID&gt;@devdatabrary2.home.nyu.edu &quot;ssh -t databrary2&quot;</code></pre></li>
 </ul>
+<ul>
+<li><pre><code>sudo su - demo</code></pre></li>
+</ul>
 <p>Create migration running script</p>
 <ul>
 <li><pre><code>for each desired migration (YYYYMMDD-NAME.sql), adjust and run:</code></pre>
@@ -176,11 +179,11 @@ This step assumes that the first time that the server was created, the &quot;Res
 <tbody>
 <tr class="odd">
 <td><p>From laptop, connect to smoketest becoming demo user</p>
- <ul>
-<li><pre><code>sudo su - demo</code></pre></li>
-</ul>
 <ul>
 <li><pre><code>ssh -t &lt;NETID&gt;@devdatabrary2.home.nyu.edu &quot;ssh -t databrary2&quot;</code></pre></li>
+</ul>
+<ul>
+<li><pre><code>sudo su - demo</code></pre></li>
 </ul>
 <p>Create migration running script, erasing old</p>
 <ul>
@@ -227,6 +230,9 @@ This step assumes that the first time that the server was created, the &quot;Res
 <td><p>From laptop, connect to prod</p>
 <ul>
 <li><pre><code>ssh -t &lt;NETID&gt;@devdatabrary2.home.nyu.edu &quot;ssh -t databrary&quot;</code></pre></li>
+</ul>
+<ul>
+<li><pre><code>sudo su - databrary</code></pre></li>
 </ul>
 <p>Create migration running script</p>
 <ul>
@@ -359,6 +365,9 @@ bash runNewDbMigrations.sh &amp;&amp; stat -c '%y %N' databraryExeLink &amp;&amp
 <ul>
 <li><pre><code>ssh -t &lt;NETID&gt;@devdatabrary2.home.nyu.edu &quot;ssh -t databrary&quot;</code></pre></li>
 </ul>
+<ul>
+<li><pre><code>sudo su - databrary</code></pre></li>
+</ul>
 <p>Create migration running script, erasing old</p>
 <ul>
 <li><pre><code>echo &#39;cd $(dirname $(readlink /home/databrary/databraryExeLink))/../share/x86_64-linux-ghc-8.0.2/databrary-1/schema/&#39; &gt; /home/databrary/runNewDbMigrations.sh</code></pre></li>
@@ -374,8 +383,8 @@ bash runNewDbMigrations.sh &amp;&amp; stat -c '%y %N' databraryExeLink &amp;&amp
   - rollback plan for complex deploys should be to prepare a branch with
     the changes ready, including any extra db migrations to undo, in a
     prepared PR 
-  - watch terminal for output for now, eventually Jenkins will record
-    log output
+  - To disconect from tmux use:
+       cltr+a d
   - periodically, run the following to clear out stale disconnected tmux
     clients
       - tmux detach-client -a
