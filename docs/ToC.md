@@ -75,7 +75,7 @@ service operations, make them easier to discover
 1. Production Static Web Content
     1.  Publish to static server (Bryan)
 1. Production Web Service (databrary.home.nyu.edu)
-    1.  Deploy, Run
+    1.  Deploy, Run (same link as 7.i)
         1.  Build and deploy to production server (done)
     2.  Monitor
         1.  Setup uptime monitoring (Bryan)
