@@ -13,7 +13,9 @@ ssh -t databrary 'sudo -u root sh -c "tmux attach"'
 You will see three windows: root, databrary, logs.
 
 # Await window of low activity
-on log window, watch for uploads
+From the root window 
+ctrl-a (Right/Left) to move left and right 
+on log window, watch for uploads (See if there any upload)
 
 # Restart
 on databrary window:
