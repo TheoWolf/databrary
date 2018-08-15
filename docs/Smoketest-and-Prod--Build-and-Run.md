@@ -374,11 +374,6 @@ bash runNewDbMigrations.sh &amp;&amp; stat -c '%y %N' databraryExeLink &amp;&amp
   - rollback plan for complex deploys should be to prepare a branch with
     the changes ready, including any extra db migrations to undo, in a
     prepared PR 
-  - example ssh + sudo: 
-      - ssh -t  \<NETID\>@smoketest "sudo -i -u build sh -c
-        '/home/build/databrary/stage-pull-migrate-build.sh'"   \# -t to
-        enter password for sudo; sh -c to be able to enter a sequence of
-        commands
   - watch terminal for output for now, eventually Jenkins will record
     log output
   - periodically, run the following to clear out stale disconnected tmux
